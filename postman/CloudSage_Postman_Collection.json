@@ -1,0 +1,485 @@
+{
+  "info": {
+    "_postman_id": "b8f69e9a-9371-4b90-8ed1-ad1e7ab84bb4",
+    "name": "CloudSage Backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46884032",
+    "_collection_link": "https://go.postman.co/collection/46884032-b8f69e9a-9371-4b90-8ed1-ad1e7ab84bb4?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:5000/api/aws/ec2/i-0878968388da28163",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/ec2/i-0878968388da28163",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "ec2",
+            "i-0878968388da28163"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/ec2/type-distribution",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/ec2/type-distribution",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "ec2",
+            "type-distribution"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/ec2/state-distribution",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/ec2/state-distribution",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "ec2",
+            "state-distribution"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/cost-trend",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/cost-trend",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "cost-trend"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/recommendations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "recommendations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/sync",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/aws/sync",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "sync"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/idle-instances",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/idle-instances",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "idle-instances"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/cost/db",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/cost/db",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "cost",
+            "db"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/idle-instances",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/idle-instances",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "idle-instances"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/ec2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/ec2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "ec2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/cost/db",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/cost/db",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "cost",
+            "db"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/cost",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/cost",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "cost"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/cost",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/cost",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "cost"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/ec2/db",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/ec2/db",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "ec2",
+            "db"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/aws/ec2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/aws/ec2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "aws",
+            "ec2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/protected",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJuaWtoaWxAdGVzdC5jb20iLCJpYXQiOjE3NzIzMDU1MTksImV4cCI6MTc3MjMwOTExOX0.1fs54qsdaFLoSodl__v1X2u7AzMtlwqw--AQiqNyu2c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/protected",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "protected"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/auth/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"nikhil@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/auth/register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Nikhil\",\r\n  \"email\": \"nikhil@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/auth/register",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Nikhil\",\r\n  \"email\": \"nikhil@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
