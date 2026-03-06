@@ -22,8 +22,8 @@ AWS → Backend APIs → PostgreSQL Database → Analytics APIs → Dashboard
 
 ---
 
-# API Documentation
 
+# API Documentation
 
 ## Authentication APIs
 
@@ -33,12 +33,15 @@ POST /api/auth/register
 
 Create a new user account.
 
-Request Body:
+Example Request
+
+```
 {
-"name": "Nikhil",
-"email": "[nikhil@example.com](mailto:nikhil@example.com)",
-"password": "password123"
+  "name": "Nikhil",
+  "email": "nikhil@example.com",
+  "password": "password123"
 }
+```
 
 ---
 
@@ -48,32 +51,29 @@ POST /api/auth/login
 
 Authenticate user and return JWT token.
 
-Request Body:
-{
-"email": "[nikhil@example.com](mailto:nikhil@example.com)",
-"password": "password123"
-}
+Example Response
 
-Response:
+```
 {
-"token": "JWT_TOKEN"
+  "token": "JWT_TOKEN"
 }
+```
 
 ---
 
-### Protected Route Test
+### Protected Route
 
 GET /api/protected
 
-Requires Authorization header:
+Requires Authorization header
 
+```
 Authorization: Bearer <JWT_TOKEN>
+```
 
+---
 
-
-## EC2 APIs
-
-
+# EC2 APIs
 
 ### Fetch EC2 Instances
 
@@ -107,37 +107,105 @@ Return instance count grouped by instance type.
 
 ---
 
-### Idle Instances Detection
-
-GET /api/aws/idle-instances
-
-Detect stopped EC2 instances.
-
----
-
-### Optimization Recommendations
-
-GET /api/aws/recommendations
-
-Generate cost optimization suggestions.
-
----
-
 ### Instance Details
 
 GET /api/aws/ec2/:instance_id
 
-Return detailed instance information.
+Return detailed EC2 instance information.
 
 ---
 
-## Cost APIs
+### Idle Instance Detection (Basic)
 
-### Fetch Cost From AWS
+GET /api/aws/idle-instances
+
+Detect stopped EC2 instances stored in database.
+
+---
+
+### Smart Idle Detection (CloudWatch)
+
+GET /api/aws/smart-idle-instances/:instanceId
+
+Detect idle EC2 instances based on CPU utilization.
+
+Logic used:
+
+CPU Utilization < 5%
+
+---
+
+### EC2 Metrics (CloudWatch)
+
+GET /api/aws/ec2-metrics/:instanceId
+
+Fetch CPU utilization metrics from AWS CloudWatch.
+
+---
+
+### EC2 Optimization Recommendations
+
+GET /api/aws/recommendations
+
+Generate infrastructure optimization suggestions.
+
+---
+
+# EBS APIs
+
+### Fetch EBS Volumes
+
+GET /api/aws/ebs
+
+Retrieve EBS volume data from AWS.
+
+---
+
+### Detect Unused Volumes
+
+GET /api/aws/unused-volumes
+
+Identify unattached EBS volumes wasting storage cost.
+
+---
+
+# RDS APIs
+
+### Fetch RDS Instances
+
+GET /api/aws/rds
+
+Retrieve database instance details from AWS RDS.
+
+---
+
+### RDS Summary
+
+GET /api/aws/rds-summary
+
+Return summary of RDS instances grouped by engine and status.
+
+---
+
+### RDS Optimization Recommendations
+
+GET /api/aws/rds-recommendations
+
+Generate database optimization suggestions such as:
+
+* Enable Performance Insights
+* Increase backup retention
+* Instance sizing recommendations
+
+---
+
+# Cost Analysis APIs
+
+### Fetch AWS Cost
 
 GET /api/aws/cost
 
-Fetch AWS cost data and store in database.
+Retrieve cost data from AWS Cost Explorer.
 
 ---
 
@@ -145,25 +213,64 @@ Fetch AWS cost data and store in database.
 
 GET /api/aws/cost/db
 
-Return stored cost history.
+Return stored cost data from database.
 
 ---
 
-### Cost Trend
+### Cost Trend Analysis
 
 GET /api/aws/cost-trend
 
-Return cost trend data for dashboard charts.
+Generate cost trend data for dashboard charts.
 
 ---
 
-## System APIs
+### Cost Waste Estimation
+
+GET /api/aws/cost-estimate
+
+Estimate monthly waste cost caused by idle resources.
+
+---
+
+# FinOps Insight APIs
+
+### Waste Report
+
+GET /api/aws/waste-report
+
+Combine infrastructure analysis to detect wasted resources.
+
+---
+
+### Optimization Score
+
+GET /api/aws/optimization-score
+
+Generate a cloud infrastructure health score.
+
+---
+
+### Resource Summary
+
+GET /api/aws/resource-summary
+
+Return infrastructure overview including:
+
+* EC2 instances
+* running/stopped state
+* EBS volumes
+* optimization score
+
+---
+
+# System APIs
 
 ### AWS Data Sync
 
 POST /api/aws/sync
 
-Synchronize AWS resources and cost data with database.
+Synchronize AWS infrastructure and cost data with database.
 
 ---
 
@@ -171,4 +278,37 @@ Synchronize AWS resources and cost data with database.
 
 GET /api/aws/summary
 
-Return system overview including instances and total cost.
+Return overall system statistics for dashboard display.
+
+
+# Future Enhancements
+
+The platform will continue expanding with additional AWS services.
+
+Upcoming modules include:
+
+* S3 storage optimization
+* Lambda monitoring
+* VPC network analysis
+* AI recommendation engine
+* Cost forecasting using ML
+* Anomaly detection
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
