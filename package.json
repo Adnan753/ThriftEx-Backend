@@ -1,0 +1,40 @@
+{
+  "name": "thriftex-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js",
+    "lint": "eslint src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adnan753/ThriftEx-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Adnan753/ThriftEx-Backend/issues"
+  },
+  "homepage": "https://github.com/Adnan753/ThriftEx-Backend#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "@aws-sdk/client-cost-explorer": "^3.1004.0",
+    "@aws-sdk/client-ec2": "^3.1040.0",
+    "@supabase/supabase-js": "^2.104.0",
+    "axios": "^1.15.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "openai": "^6.35.0",
+    "pg": "^8.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.3",
+    "nodemon": "^3.1.14"
+  }
+}
