@@ -13,6 +13,7 @@ const costRoutes = require("./routes/costRoutes");
 const analysisRoutes = require("./routes/analysisRoutes");
 const agentRoutes = require("./routes/agentRoutes");
 const resourceRoutes = require("./routes/resourceRoutes");
+const goalRoutes = require("./routes/goalRoutes");
 
 // Middlewares
 app.use(express.json());
@@ -24,7 +25,7 @@ app.use("/api/costs", costRoutes);
 app.use("/api/analysis", analysisRoutes);
 app.use("/api/agent", agentRoutes);
 app.use("/api/resources", resourceRoutes);
-app.use("/api/resources", resourceRoutes);
+app.use("/api/goals", goalRoutes);
 
 // Health & DB Check 
 app.get("/", (req, res) => {
