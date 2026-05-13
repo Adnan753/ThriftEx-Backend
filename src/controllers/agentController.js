@@ -1,6 +1,7 @@
 const { getSpendingSummary } = require('../services/analyzer');
 const { analyzeCosts } = require('../services/claude');
 const { saveRecommendation, getPendingRecommendations, executeRecommendation, dismissRecommendation } = require('../services/executor');
+const { runAgentAnalysis, runAnomalyDetection, runForecast } = require('../services/agentBridge');
 
 async function generateAndSaveRecommendations (req, res) {
     try {
@@ -79,9 +80,62 @@ async function rejectRecommendation (req, res) {
     }
 }
 
+async function getAgentAnalysis(req, res) {
+    try {
+        const { goal } = req.query;
+        const result = await runAgentAnalysis(goal || null);
+        
+        return res.status(200).json({
+            message: 'Agent analysis complete',
+            data: result
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server Error',
+            error: error.message
+        })
+    }
+}
+
+async function getAnomalies(req, res) {
+    try {
+        const result = await runAnomalyDetection();
+
+        return res.status(200).json({
+            message: 'Anomaly detection complete',
+            data: result
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server Error',
+            error: error.message
+        });
+    }
+}
+
+async function getForecast(req, res) {
+    try {
+        const days = parseInt(req.query.days) || 30;
+        const result = await runForecast(days);
+
+        return res.status(200).json({
+            message: 'Forecast complete',
+            data: result
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server Error',
+            error: error.message
+        });
+    }
+}
+
 module.exports = {
     generateAndSaveRecommendations,
     listRecommendations,
     approveRecommendation,
-    rejectRecommendation
+    rejectRecommendation,
+    getAgentAnalysis,
+    getAnomalies,
+    getForecast
 }

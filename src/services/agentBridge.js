@@ -31,7 +31,7 @@ async function runAgentAnalysis(goal = null) {
         summary: {
             current_month_total: summary.current_month.total,
             previous_month_total: summary.previous_month.total,
-            percentage_change: summary.percentage_change,
+            percent_change: summary.percent_change,
             avg_daily: summary.forecast.avg_daily,
             forecasted_total: summary.forecast.forecasted_month_total,
             top_spenders: summary.top_spenders
