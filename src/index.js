@@ -12,6 +12,7 @@ const pool = require('./db/db');
 const costRoutes = require("./routes/costRoutes");
 const analysisRoutes = require("./routes/analysisRoutes");
 const agentRoutes = require("./routes/agentRoutes");
+const resourceRoutes = require("./routes/resourceRoutes");
 
 // Middlewares
 app.use(express.json());
@@ -22,6 +23,8 @@ app.use(cors());
 app.use("/api/costs", costRoutes);
 app.use("/api/analysis", analysisRoutes);
 app.use("/api/agent", agentRoutes);
+app.use("/api/resources", resourceRoutes);
+app.use("/api/resources", resourceRoutes);
 
 // Health & DB Check 
 app.get("/", (req, res) => {
